@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formular>
+	<gruppe>
+	
+	<gruppenleiter>
+		<vorname>Max</vorname>
+		<nachname>Mustermann</nachname>
+		<email>max.mustermann@gmx.de</email>
+		<geburtsdatum>01.01.1999</geburtsdatum>
+		<erfahrung>p</erfahrung>
+		<schlagzeug>true</schlagzeug>
+		<anmerkung>blabla</anmerkung>
+	</gruppenleiter>
+	
+	<person>
+		<vorname>Max</vorname>
+		<nachname>Mustermann</nachname>
+		<email>max.mustermann@gmx.de</email>
+		<geburtsdatum>01.01.1999</geburtsdatum>
+		<erfahrung>a</erfahrung>
+		<schlagzeug>false</schlagzeug>
+	</person>
+	
+	<person>
+		<vorname>Max</vorname>
+		<nachname>Mustermann</nachname>
+		<email>max.mustermann@gmx.de</email>
+		<geburtsdatum>01.01.1999</geburtsdatum>
+		<erfahrung>f</erfahrung>
+		<schlagzeug>true</schlagzeug>
+	</person>
+	
+	<agb>true</agb>
+	
+	</gruppe>
+</formular>

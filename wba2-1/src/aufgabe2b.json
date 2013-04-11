@@ -1,0 +1,34 @@
+{
+  "formular": {
+    "gruppe": {
+      "gruppenleiter": {
+        "vorname": "Max",
+        "nachname": "Mustermann",
+        "email": "max.mustermann@gmx.de",
+        "geburtsdatum": "01.01.1999",
+        "erfahrung": "p",
+        "schlagzeug": "true",
+        "anmerkung": "blabla"
+      },
+      "person": [
+        {
+          "vorname": "Max",
+          "nachname": "Mustermann",
+          "email": "max.mustermann@gmx.de",
+          "geburtsdatum": "01.01.1999",
+          "erfahrung": "a",
+          "schlagzeug": "false"
+        },
+        {
+          "vorname": "Max",
+          "nachname": "Mustermann",
+          "email": "max.mustermann@gmx.de",
+          "geburtsdatum": "01.01.1999",
+          "erfahrung": "f",
+          "schlagzeug": "true"
+        }
+      ],
+      "agb": "true"
+    }
+  }
+}

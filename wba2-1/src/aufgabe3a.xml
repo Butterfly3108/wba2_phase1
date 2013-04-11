@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Rezeptinformationen zu Lenchen's Schokoladenkuchen -->
+
+<rezept>
+
+	<titel>Lenchen's Schokoladenkuchen</titel>
+	<bild>http://www.chefkoch.de/rezepte/24641006006067/lenchen-s-schokoladenkuchen.jpg</bild>
+	
+	<zutaten>
+		<zatat name="Butter" menge="200" einheit="g" />
+		<zatat name="Zucker" menge="200" einheit="g" />
+		<zatat name="Schokolade, Blockschokolade" menge="200" einheit="g" />
+		<zatat name="Mehl" menge="120" einheit="g" />
+		<zatat name="Backpulver" menge="1/2" einheit="TL" />
+		<zatat name="Vanillezucker" menge="1" einheit="Pkt." />
+		<zatat name="Ei(er)" menge="4" einheit="Stk" />
+		<potion menge="16" />
+	</zutaten>
+	
+	<zubereitung>
+		<dauer>ca. 1 Std.</dauer>
+		<schwierigkeitsgrad>normal</schwierigkeitsgrad>
+		<brennwert>295 kcal</brennwert>
+		
+		<schritt>Butter und Schokolade im Wasserbad schmelzen.</schritt>
+		<schritt>Eier trennen.</schritt>
+		<schritt>Eiweiß steif schlagen.</schritt>
+		<schritt>Eigelbe, Zucker und Vanillezucker verrühren.</schritt>
+		<schritt>Geschmolzene Butter-Schokomasse hinzufügen und mischen.</schritt>
+		<schritt>Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben.</schritt>
+		<schritt>In eine gut gefettete Form geben.</schritt>
+		<schritt>Bei 180°Grad 40 – 50 Minuten backen.</schritt>
+	</zubereitung>
+	
+	<nutzerkommentare>
+		<kommentar verfasser="swieselchen" datum="07.02.2002" uhrzeit="18:49" text="Habe Deinen Kuchen gestern gebacken 
+		(kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma 
+		und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept. " />
+	</nutzerkommentare>
+
+</rezept>
