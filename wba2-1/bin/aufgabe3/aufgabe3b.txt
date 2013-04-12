@@ -1,0 +1,5 @@
+Nach dem Betrachten anderer Rezepte lassen sich viele Gemeinsamkeiten bezüglich der 
+Daten feststellen. Jedes Rezept beinhaltet einen Titel, eine Reihe von Zutaten und eine
+Beschreibung zur Zubereitung. Unterschiedlich ist allerdings, ob ein Bild angegeben ist,
+die Menge der Zutaten und die Anzahl der Schritte. Außerdem kann es vorkommen, dass es 
+noch einen Kommentar eines Nutzers gibt.
