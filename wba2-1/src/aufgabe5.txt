@@ -1,0 +1,28 @@
+XML und JSON
+
+- Strukturierung von Text
+- gute Lesbarkeit und einfache Struktur
+  -> daher zum einfachen Entwickeln und Speichern von eigenen Datenstrukturen geeignet
+- Erstellung einer Struktur bzw eines bestimmten Formates ist relativ einfach
+  -> dabei sind die Sprachen vollständig auf die eigenen Bedürfnisse anpassbar
+- es kann eine Datenstruktur für ein spezifisches Einsatzgebiet erstellt werden
+  -> durch Schema-Datei können für diese Daten gewünschte Restriktionen vorgegeben werden
+- Formate standardisiert
+  -> Verarbeitung und Verteilung einfach und weitgehend möglich
+- Daten relativ kompakt, daher geeignet für Verteilung bzw Speicherung in verteilten Systemen
+
+
+Vergleich
+
+XML-Daten sind in vielen Fällen oft nicht der ideale Weg, um Daten zu strukturieren. Durch 
+das Tag-System von XML werden oft kleine Datenbestände sehr aufgebläht und unübersichtlich. 
+Zusätzlich ist das Ansprechen einzelner Knoten (XML-Nodes) in einer XML-Datei nicht immer leicht.
+
+Eine Alternative dazu bietet JSON, kurz für JavaScript Object Notation, einer Vorgehensweise, 
+um Daten auf einfache Weise zu strukturieren. JSON ist sehr leicht zu erlernen, zu handhaben 
+und hat sich inzwischen für viele weitere Programmiersprachen durchgesetzt.
+
+Der große Vorteil von JSON im Vergleich zu XML liegt in der einfachen Handhabung. Da JSON selbst 
+gültiges Javascript darstellt, kann es direkt ausgeführt und somit in ein Javascript-Objekt 
+überführt werden. Der Zugriff auf die einzelnen Eigenschaften kann dann über normalen 
+Attributzugriff geschehen. 
