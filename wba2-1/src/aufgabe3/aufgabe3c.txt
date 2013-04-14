@@ -1,0 +1,10 @@
+Elemente, die nur Text enthalten, keine Attribute oder Nachfolgeelemente besitzen,
+werden in simple-types abgebildet. Als complex-types werden Elemente definiert, die 
+Attribute und/oder Text enthalten. Sie können aber auch leer sein und Nachfolgeelemente
+erstellen. Mit minOccurs und maxOccurs hat man die Möglichkeit festzulegen, wie oft ein
+Element mindestens und maximal vorkommen darf. Dies ist zum Beispiel bei dem Element 
+"zutat" sinnvoll, da für ein sinnvolles Rezept mindestens eine Zutat angegeben werden muss.
+Des weiteren kann man durch Grouping für den Abschnitt Zubereitung, die Reihenfolge der 
+Elemente, die durch <sequence> umschlossen sind, festlegen. Das Vorkommen wird dabei durch 
+minOccurs und maxOccurs geregelt. Zur Deklaration mit Typen gibt es 44 vordefinierte, aber 
+auch die Eigenschaft, Datentypen einzuschränken. 

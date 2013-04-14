@@ -1,0 +1,36 @@
+Wohlgeformtheit
+-> bezieht sich darauf, dass sich das Dokument vollständig an die 
+   Regeln zur Erstellung von XML-Dokumenten hält.
+
+	- Es gibt – abgesehen von Kommentaren und Processing
+	  Instructions – genau ein Wurzelelement
+	- Nichtleere Elemente haben eine öffnende und schließende
+	  Markierung
+	- Werte von Attributen sind durch ' oder „ eingeschlossen
+	- Elemente, die nicht Wurzel sind müssen vollständig von
+	  dem umgebenden Element eingeschlossen sein.
+	- Alle Zeichen entsprechen dem spezifizierten Zeichensatz
+	
+Validität
+-> bedeutet das eine XML-Instanz nicht nur wohlgeformt ist, sondern
+   zusätzlich den in einer DTD (oder einem XML-Schema usw.) angegebenen 
+   Bedingungen genügt.
+   
+Namespaces
+-> Mit Namensräumen werden einzelne XMLVokabulare gegeneinander 
+   abgegrenzt. In XML Schema basiert das Namensraumsystem auf URIs 
+   (Uniform Resource Identifier). Die Elemente im XML-File müssen 
+   dem Zielnamensraum des Schemas entsprechen.
+   Die Namensräume der einzelnen Elemente werden mit dem Attribut „xmlns“
+   festgelegt. In der Definition kann ein Kürzel für den URI angegeben werden.
+   Dieses wird bei allen Vorkommen vom Parser durch den eigentlichen URI
+   ersetzt. Der Namensraumidentifier oder das zugehörige Kürzel werden sowohl
+   dem Start- als auch dem Endtag vorangestellt und von diesem durch einen
+   Doppelpunkt getrennt.
+   Es ist möglich, in einer Datei mehrere Namensräume zu definieren.
+   Dies unterstützt die Konstruktion von modularen Schemas.
+   Wird das Kürzel bei der Definition weggelassen, wird damit der
+   Defaultnamensraum definiert. Dieser muss bei den Elementen nicht explizit
+   angegeben werden.
+   Attribute werden normalerweise nicht qualifiziert und werden dann automatisch
+   dem Namensraum des Elternelements zugeordnet.
