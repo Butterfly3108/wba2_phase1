@@ -4,13 +4,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.sql.Timestamp;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 public class RezeptMain {
@@ -48,40 +52,47 @@ public class RezeptMain {
     private static void ausgabeRezept(Rezepte rezept) {
         for (int i = 0; i < rezept.getRezept().size(); i++) {
             //Verfasser
-            System.out.println("\n \n REZEPT");
+            System.out.println("REZEPT");
             System.out.println("Titel: " + rezept.getRezept().get(i).getTitel());
-            System.out.println("Bild_Rezept: " + rezept.getRezept().get(i).getBild());
+            System.out.println("Bild_Rezept: " + rezept.getRezept().get(i).getBild() +"\n");
 
             //Zutaten
-            System.out.println("Zutaten:");
+            System.out.println("\nZutaten: ");
             for (int j = 0; j < rezept.getRezept().get(i).getZutaten().getZutat().size(); j++) {
-                System.out.println(rezept.getRezept().get(i).getZutaten().getZutat().get(j).getName() + " " + rezept.getRezept().get(i).getZutaten().getZutat().get(j).getMenge() + " " + rezept.getRezept().get(i).getZutaten().getZutat().get(j).getEinheit());
-
+            	System.out.println(rezept.getRezept().get(i).getZutaten().getZutat().get(j).menge +" "+ rezept.getRezept().get(i).getZutaten().getZutat().get(j).einheit +" "+ rezept.getRezept().get(i).getZutaten().getZutat().get(j).name);
             }
 
             //Zubereitung
-            System.out.println("\n \n"+ rezept.getRezept().get(i).getZubereitung().arbeitszeit.getDauer() + " " + rezept.getRezept().get(i).getZubereitung().arbeitszeit.getEinheit() + " Arbeitszeit");
+            System.out.println("\nZubereitung: ");
+            System.out.println(rezept.getRezept().get(i).getZubereitung().arbeitszeit.getDauer() + " " + rezept.getRezept().get(i).getZubereitung().arbeitszeit.getEinheit() + " Arbeitszeit");
             if (rezept.getRezept().get(i).getZubereitung().ruhezeit != null) {
-                System.out.println(rezept.getRezept().get(i).getZubereitung().ruhezeit.getDauer() + " " + rezept.getRezept().get(i).getZubereitung().ruhezeit.getEinheit()+ " Ruhezeit");
+                System.out.println(""+ rezept.getRezept().get(i).getZubereitung().ruhezeit.getDauer() + " " + rezept.getRezept().get(i).getZubereitung().ruhezeit.getEinheit()+ " Ruhezeit");
             }
             if (rezept.getRezept().get(i).getZubereitung().brennwert != null) {
-                System.out.println("Brennwert: "+ rezept.getRezept().get(i).getZubereitung().getBrennwert() + " kcal");
+                System.out.println("Brennwert: "+ rezept.getRezept().get(i).getZubereitung().getBrennwert().wert + " kcal");
             }
-            System.out.println("Schwierigkeitsgrad: " + rezept.getRezept().get(i).getZubereitung().getSchwierigkeitsgrad());
+            System.out.println("Schwierigkeitsgrad: " + rezept.getRezept().get(i).getZubereitung().getSchwierigkeitsgrad().grad);
+            
+            System.out.println("\nBeschreibung: ");
+            
+            for(int m = 0; m < rezept.getRezept().get(i).getZubereitung().getBeschreibung().schritt.size(); m++ ){ 
+            	System.out.println(rezept.getRezept().get(i).getZubereitung().getBeschreibung().schritt.get(m) );
+            }
 
+            System.out.println();
+            
             //Kommentare
             
-            if (rezept.getRezept().get(i).getBenutzerkommentare().kommentar != null) {
-                System.out.println();
+            if (rezept.getRezept().get(i).getNutzerkommentare().kommentar != null) {
                 System.out.println("Kommentare: ");
-                for (int k = 0; k <= rezept.getRezept().get(i).getBenutzerkommentare().getKommentar().size() - 1; k++) {
-                    System.out.println("Autor: " + rezept.getRezept().get(i).getBenutzerkommentare().getKommentar().get(k).getVerfasser());
-                    System.out.println("Datum: " + rezept.getRezept().get(i).getBenutzerkommentare().getKommentar().get(k).getDatum());
-                    System.out.println("Uhezeit: " + rezept.getRezept().get(i).getBenutzerkommentare().getKommentar().get(k).getUhrzeit());
-                    System.out.println("Kommentar: " + rezept.getRezept().get(i).getBenutzerkommentare().getKommentar().get(k).getText());
-                    System.out.println();
+                for (int k = 0; k <= rezept.getRezept().get(i).getNutzerkommentare().getKommentar().size() - 1; k++) {
+                    System.out.println("Autor: " + rezept.getRezept().get(i).getNutzerkommentare().getKommentar().get(k).verfasser);
+                    System.out.println("Datum: " + rezept.getRezept().get(i).getNutzerkommentare().getKommentar().get(k).datum);
+                    System.out.println("Kommentar: " + rezept.getRezept().get(i).getNutzerkommentare().getKommentar().get(k).text +"\n");
                 }
-                
+            }
+            else {
+            	System.out.println("Keine Kommentare vorhanden!");
             }
         }
     }
@@ -94,6 +105,7 @@ public class RezeptMain {
         String name;
         String comment;
         int ein;
+        
         eingabe = JOptionPane.showInputDialog("Welche Datei moechten Sie erweitern: ");
         ein = Integer.parseInt(eingabe);
         if (ein > rezepte.getRezept().size()) {
@@ -102,19 +114,28 @@ public class RezeptMain {
         }
 
 
-        Rezepte.Rezept.Benutzerkommentare.Kommentar newcomment = new Rezepte.Rezept.Benutzerkommentare.Kommentar();
+        Rezepte.Rezept.Nutzerkommentare.Kommentar newcomment = new Rezepte.Rezept.Nutzerkommentare.Kommentar();
         name = JOptionPane.showInputDialog("Name: ");
         newcomment.setVerfasser(name);
-        // Automatische generierung der Systemzeit
-        Timestamp aktTime = new Timestamp(System.currentTimeMillis());
-        System.out.println("Datum: " + aktTime);
+        
+    	// Datum und Uhrzeit
+        GregorianCalendar gCalendar = new GregorianCalendar();
+        Date currentDate = new Date();
+        gCalendar.setTime(currentDate);
+        XMLGregorianCalendar xmlCalendar = null;
+        try {
+        xmlCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(gCalendar);
+        } catch (DatatypeConfigurationException ex) {
+        }
+        newcomment.setDatum(xmlCalendar);
+        
         comment = JOptionPane.showInputDialog("Ihr Kommentar: ");
         newcomment.setText(comment);
 
         // Formatierung der XML-Datei
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         // Kommentar hinzufuegen
-        rezepte.getRezept().get(ein - 1).getBenutzerkommentare().getKommentar().add(rezepte.getRezept().get(ein - 1).getBenutzerkommentare().getKommentar().size(), newcomment);
+        rezepte.getRezept().get(ein - 1).getNutzerkommentare().getKommentar().add(rezepte.getRezept().get(ein - 1).getNutzerkommentare().getKommentar().size(), newcomment);
         m.marshal(rezepte, w);
     }
 }

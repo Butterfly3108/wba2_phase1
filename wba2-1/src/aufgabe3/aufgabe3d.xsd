@@ -33,7 +33,7 @@
 												</xs:attribute>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="portion">
+										<xs:element name="portion" minOccurs="0" >
 											<xs:complexType>
 												<xs:attribute name="menge" type="xs:integer" />
 											</xs:complexType>
@@ -108,15 +108,14 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="benutzerkommentare">
+							<xs:element name="nutzerkommentare">
 								<xs:complexType>
 									<xs:sequence>
 										<!-- Die Anzahl der Kommentare ist unbegrenzt, aber möglicherweise ist keins vorhanden. -->
 										<xs:element name="kommentar" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:attribute name="verfasser" type="xs:string" />
-												<xs:attribute name="datum" type="xs:date" />
-												<xs:attribute name="uhrzeit" type="xs:time" />
+												<xs:attribute name="datum" type="xs:dateTime" />
 												<xs:attribute name="text" type="xs:string" />
 											</xs:complexType>
 										</xs:element>

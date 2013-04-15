@@ -16,7 +16,7 @@
 										<xs:element name="zutat" minOccurs="1" maxOccurs="unbounded" >
 											<xs:complexType>
 												<xs:attribute name="name" type="xs:string" />
-												<xs:attribute name="menge" type="xs:float" />
+												<xs:attribute name="menge" type="xs:int" />
 												<xs:attribute name="einheit">
 													<xs:simpleType>
 														<!-- Beschraenkung auf moegliche Einheiten. -->
@@ -108,16 +108,15 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="benutzerkommentare">
+							<xs:element name="nutzerkommentare">
 								<xs:complexType>
 									<xs:sequence>
 										<!-- Die Anzahl der Kommentare ist unbegrenzt, aber möglicherweise ist keins vorhanden. -->
 										<xs:element name="kommentar" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
-												<xs:attribute name="verfasser" type="xs:string" />
-												<xs:attribute name="datum" type="xs:date" />
-												<xs:attribute name="uhrzeit" type="xs:time" />
 												<xs:attribute name="text" type="xs:string" />
+												<xs:attribute name="datum" type="xs:date" />
+												<xs:attribute name="verfasser" type="xs:string" />												
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rezepte xmlns="http://www.example.org/aufgabe3d">
+    <rezept>
+        <titel>Kleine Pinguine mit Traubenfrack und Karottenfüßchen</titel>
+        <bild>http://static.chefkoch-cdn.de/ck.de/rezepte/194/194675/401481-960x720-kleine-pinguine-mit-traubenfrack-und-karottenfuesschen.jpg</bild>
+        <zutaten>
+        	<zutat name="Möhre(n), nicht zu dünn" menge="1" einheit="Stk"  />
+        	<zutat name="Weintrauben, blaue" menge="20" einheit="Stk"  />
+        	<zutat name="Petersilie" menge="1" einheit="EL"  />
+        	<zutat name="Frischkäse" menge="200" einheit="g"  />
+        </zutaten>
+        <zubereitung>
+            <arbeitszeit einheit="min" dauer="30"/>
+            <schwierigkeitsgrad grad="pfiffig"/>
+            <beschreibung>
+                <schritt>Möhre in drei bis vier Millimeter dicke Scheibchen schneiden.</schritt>
+                <schritt>Aus den Moehrenscheibchen mit je zwei Schnitten bis zur Mitte ein kleines Dreieck herausschneiden.</schritt>
+                <schritt>Dreieck beiseitelegen (ergibt den Schnabel des Pinguins).</schritt>
+                <schritt>In eine kleinere rote Traube einen sehr kleinen Schlitz für den Schnabel schneiden und die Moehrenecke einstecken.</schritt>
+                <schritt>Aus einer groeßeren Traube ein Drittel als Spalte ausschneiden.</schritt>
+                <schritt>Den entstandenen Spalt sauber mit Frischkaese fuellen (das gibt den Pinguinbauch).</schritt>
+                <schritt>Die beiden Trauben auf einen Zahnstocher stecken (die kleine als Kopf oben, die große als Bauch unten) und unten die Karotten-Fueße befestigen. Oben ein kleines Petersilienblaettchen auf den Spieß schieben.</schritt>
+                <schritt>Die restlichen Pinguine genauso herstellen.</schritt>
+            </beschreibung>
+        </zubereitung>
+        <nutzerkommentare>
+            <kommentar verfasser="dorry" datum="2011-11-25+16:46" text="Hallo, die lieben Kleinen sind wirklich sehr putzig! Wer keine Karotten mit Trauben mag: Ich kenne das Rezept mit Oliven statt Trauben. Gruss Dorry" />
+        </nutzerkommentare>
+    </rezept>
+</rezepte>
